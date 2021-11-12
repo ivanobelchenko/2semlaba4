@@ -1,0 +1,386 @@
+body
+{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+.body
+{
+    background-color: rgb(40, 23, 78);
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    &__cloud
+    {
+        animation-name: cloud;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: running;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    &__star
+    {
+        animation-name: star;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: running;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        transform: translate(-40%, 50%);
+    }
+    &__ufo
+    {
+        animation-name: ufo;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-play-state: running;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        transform: translate(-10%, -30%);
+    }
+    &__rocket
+    {
+        animation-name: rocket;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-play-state:paused;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        transform: translate(70%, 60%);
+    }
+    &__flag
+    {
+        position: absolute;
+        width: 10rem;
+        left: 30rem;
+        top: 30rem;
+        fill: black;
+        stroke: black;
+    }
+    &__celeb
+    {
+        position: absolute;
+        width: 100vh;
+        height: 30rem;
+        top: calc( -200px - 7rem);
+        left: 25rem;
+        &__g
+        {
+            fill: rgb(155, 27, 27);
+            stroke: white;
+            stroke-width: 1rem;
+        }
+    }
+    &__star-btn
+    {
+        position: absolute;
+        width: 10rem;
+        top: 10rem;
+        left: 20vh;
+        animation-name: star-btn;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+    }
+    &__star-btn-right
+    {
+        position: absolute;
+        width: 10rem;
+        left: 80vw;
+        top: 10rem;
+        animation-name: star-btn-r;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+    }
+    &__btn
+    {
+        position: absolute;
+        width: 8rem;
+        height: 8rem;
+        top: 25rem;
+        left: 22vh;
+        background-color: rgb(167, 63, 63);
+        color: white;
+        font-weight: bold;
+        outline: none;
+        border-radius: 4rem;
+        border: 1px solid white;
+        cursor: pointer;
+        font-size: 3rem;
+    }
+    &__man
+    {
+        position: absolute;
+        fill: black;
+        stroke: black;
+        width: 10rem;
+        transform: translate( 500%, 350%);
+        animation-name: man;
+        animation-duration: 1.8s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-play-state: paused;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        fill: #c7ae88;
+        stroke: none;
+    }
+}
+
+.star-left
+{
+    fill: rgb(253, 253, 94);
+    stroke: black;
+}
+
+.fire
+{
+    fill: black;
+}
+
+// FLAG
+
+.flag
+{
+    &__stik
+    {
+        fill: rgb(150, 123, 84);
+    }
+    &__treug
+    {
+        fill: rgb(255, 255, 255);
+        animation-name: flag;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: running;
+        animation-delay: 15s;
+        animation-fill-mode: forwards;
+    }
+}
+
+// RUN
+.running-delay
+{
+    animation-play-state: running !important;
+    animation-delay: 2s;
+}
+
+.running
+{
+    animation-play-state: running !important;
+}
+
+.paused
+{
+    animation-play-state: paused !important;
+}
+
+// DISPLAY NONE
+.display-none
+{
+    display: none;
+}
+
+.ufo-eyes
+{
+    fill: white;
+    animation-name: ufo-eyes;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-delay: 15s;
+    animation-fill-mode: forwards;
+}
+
+.btn-pusk
+{
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    transform: translate( 640%, 250%);
+    cursor: pointer;
+    opacity: 0;
+    &__body
+    {
+        fill: #55bd68;
+        stroke: black;
+        stroke-width: 0.15rem;
+        &:hover
+        {
+            fill: rgb(44, 106, 44);
+        }
+    }
+    &__center
+    {
+        fill: none;
+        stroke: black;
+        stroke-width: 0.3rem;
+        stroke-linecap: round;
+    }
+    &__top
+    {
+        fill: none;
+        stroke: black;
+        stroke-width: 0.3rem;
+        stroke-linecap: round;
+    }
+    animation-name: btn-pusk;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-delay: 15s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cloud {
+    0%
+    {
+        
+    }
+    25%
+    {
+        transform: translate(-0.5%, -0.5%);
+    }
+    50%
+    {
+        transform: translate(-0.5%, 0.5%);
+    }
+    75%
+    {
+        transform: translate(0.5%, 0.5%);
+    }
+    100%
+    {
+        transform: translate(0.5%, -0.5%);
+    }
+}
+
+@keyframes star {
+    0%
+    {
+    }
+    25%
+    {
+        transform: translate(-30%, 45%);
+    }
+    50%
+    {
+        transform: translate(-10%, 40%);
+    }
+    75%
+    {
+        transform: translate(15%, 35%);
+    }
+    100%
+    {
+        transform: translate(50%, 30%);
+    }
+}
+
+@keyframes ufo {
+    25%
+    {
+        transform: translate(10%, 0%);
+    }
+    50%
+    {
+        transform: translate(50%, 15%);
+    }
+    75%
+    {
+        transform: translate(30%, 30%);
+    }
+    100%
+    {
+        transform: translate(20%, 80%);
+    }
+}
+
+@keyframes ufo-eyes {
+    100%
+    {
+        fill:#324D5B;
+    }
+}
+
+@keyframes rocket {
+    100%
+    {
+        transform: translate(70%,-50%);
+    }
+}
+
+@keyframes btn-pusk
+{
+    100%
+    {
+        opacity: 100%;
+    }
+}
+
+@keyframes flag
+{
+    50%
+    {
+        fill: rgb(76, 70, 243);
+    }
+    100%
+    {
+        fill: rgb(235, 101, 101);
+    }
+}
+
+@keyframes star-btn
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes star-btn-r
+{
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes man {
+    75%
+    {
+        transform: translate( 570%, 345%);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translate( 575%, 340% );
+        opacity: 0;
+    }
+}
